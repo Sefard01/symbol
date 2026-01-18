@@ -12,7 +12,9 @@ header {
   height: auto;
   width: 100%;
   display: flex;
-  border: 1px solid white;
+  padding: 0px 16px;
+ box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  
 }
 .logo{
   height: 40px;
@@ -30,21 +32,28 @@ header {
 }
 /* App wrapper */
 .app {
-  max-width: 520px;
+  width: 70vw;
   margin: auto;
   padding: 16px;
-  height: 100vh;
+  height: 80vh;
   display: flex;
   flex-direction: column;
 }
 
 /* ================= INPUT AREA ================= */
 
+#myName{
+  width: 250px;
+  margin : auto;
+  padding: 8px 12px;
+  border-radius: 6px;                   
+}
 .input {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 12px;
+ 
+  
+  padding: 6px ;
   border: 2px solid rgb(1, 36, 28);
   border-radius: 30px;
   background-color: #ffffff;
@@ -56,12 +65,14 @@ textarea {
   font-size: 18px;
   height: 45px;
   border: none;
+  border-radius: 20px;
   resize: none;
   padding: 8px;
 }
 
 textarea:focus {
   outline: none;
+  overflow-x:hidden ;
   border: none;
   box-shadow: none;
 }
@@ -87,13 +98,14 @@ button img {
 
 .chat-header {
   display: flex;
+  
   justify-content: space-between;
   padding: 8px 12px;
   background: #075e54;
   color: white;
   font-weight: bold;
-  border-radius: 6px;
-  margin-bottom: 8px;
+ 
+ 
 }
 
 /* ================= CHAT AREA ================= */
@@ -102,6 +114,7 @@ button img {
   flex: 1;
   background: #e5ddd5;
   padding: 10px;
+
   border-radius: 6px;
   overflow-y: auto;
   margin-bottom: 10px;
@@ -161,6 +174,18 @@ button img {
   text-decoration: underline;
 }
 
+.date-summary {
+  align-self: center;
+  background: #f0f0f0;
+  color: #333;
+  font-size: 12px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  margin: 6px 0 12px;
+  text-align: center;
+}
+
+
 @media (max-width: 768px) {
 
   html,
@@ -168,7 +193,8 @@ button img {
     height: 100%;
   }
 
- .app {
+  /* calculate header and logo */
+  .app {
     height: calc(100vh - 50px); 
     max-width: 100%;
     padding: 10px;
@@ -178,12 +204,13 @@ button img {
 
   .chat-header {
     flex-shrink: 0;
+
   }
 
   .chat-wrapper {
     flex: 1;
     margin: 8px 0;
-    overflow-y: auto;
+    overflow-x:  hidden;
   }
 
   .message {
