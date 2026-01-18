@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Symbol</title>
+    <link rel="stylesheet" href="style.css" />
+  
+    <link rel="icon" type="image/png" href="logo.png" />
+  </head>
+  <body>
+    <header>
+      <div class="logo"></div>
+      <div class="name">Symbol</div>
+    </header>
+    <div class="app">
+      <div class="chat-header">
+        <span id="leftUser"></span>
+        <span id="rightUser"></span>
+      </div>
+
+      <div class="chat-wrapper">
+        <div id="chatContainer" class="chat-container"></div>
+      </div>
+       <input
+        type="text"
+        id="myName"
+        placeholder="Enter your name (exact as in chat)"
+      />
+
+      <div class="input">
+        <textarea
+          id="chatInput"
+          placeholder="Paste WhatsApp chat here..."
+        ></textarea>
+
+        <button id="renderBtn"><img src="send.svg" alt="" /></button>
+      </div>
+    </div>
+    
+
+    <script src="script.js"></script>
+  </body>
+</html>
