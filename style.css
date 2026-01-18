@@ -168,8 +168,8 @@ button img {
     height: 100%;
   }
 
-  .app {
-    height: 100vh;
+ .app {
+    height: calc(100vh - 50px); 
     max-width: 100%;
     padding: 10px;
     display: flex;
